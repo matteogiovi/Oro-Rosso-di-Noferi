@@ -1,0 +1,71 @@
+/* ============================================
+   Territorio Cards
+   ============================================ */
+.territory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+}
+
+.territory-grid .territory-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all var(--duration-slow) var(--ease-out);
+}
+
+.territory-grid.is-visible .territory-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.territory-card {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 162, 84, 0.12);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.territory-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(212, 162, 84, 0.25);
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.territory-card-icon {
+  margin-bottom: var(--space-lg);
+  color: var(--gold-400);
+  display: inline-flex;
+}
+
+.territory-card-icon svg {
+  opacity: 0.85;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.territory-card:hover .territory-card-icon svg {
+  opacity: 1;
+}
+
+.territory-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: var(--space-md);
+  color: var(--gold-200);
+}
+
+.territory-card p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 900px) {
+  .territory-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

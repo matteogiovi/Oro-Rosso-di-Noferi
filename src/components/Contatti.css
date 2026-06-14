@@ -1,0 +1,95 @@
+/* ============================================
+   Contatti Section
+   ============================================ */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all var(--duration-slow) var(--ease-out);
+}
+
+.contacts-grid.is-visible .contact-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold-200);
+}
+
+.contact-icon {
+  color: var(--gold-500);
+  margin-bottom: var(--space-lg);
+  display: inline-flex;
+}
+
+.contact-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--earth-800);
+  margin-bottom: var(--space-md);
+}
+
+.contact-card p {
+  font-size: 0.92rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+.contact-link {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--crimson-400);
+  letter-spacing: 0.03em;
+  position: relative;
+  display: inline-block;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.contact-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--crimson-400);
+  transition: width var(--duration-normal) var(--ease-out);
+}
+
+.contact-link:hover {
+  color: var(--gold-500);
+}
+
+.contact-link:hover::after {
+  width: 100%;
+  background: var(--gold-500);
+}
+
+.contact-social {
+  font-style: italic;
+  color: var(--gray-400) !important;
+}
+
+@media (max-width: 768px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}

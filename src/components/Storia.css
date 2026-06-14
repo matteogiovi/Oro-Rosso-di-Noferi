@@ -1,0 +1,86 @@
+/* ============================================
+   Storia / Story Banner
+   ============================================ */
+.story-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2xl);
+  padding: var(--space-3xl);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 162, 84, 0.15);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all var(--duration-slow) var(--ease-out);
+}
+
+.story-banner.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-icon {
+  flex-shrink: 0;
+}
+
+.story-year-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.story-year-circle::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 162, 84, 0.2);
+}
+
+.story-year {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--gold-300);
+  letter-spacing: 0.05em;
+}
+
+.story-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  margin-bottom: var(--space-lg);
+}
+
+.story-text p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.story-text strong {
+  color: var(--gold-300);
+}
+
+@media (max-width: 768px) {
+  .story-banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-2xl);
+  }
+
+  .story-year-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .story-year {
+    font-size: 1.1rem;
+  }
+}

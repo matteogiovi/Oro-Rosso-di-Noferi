@@ -1,0 +1,122 @@
+/* ============================================
+   Produzione — Process Timeline
+   ============================================ */
+.process-timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all var(--duration-slow) var(--ease-out);
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+.process-timeline.is-visible .process-step {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.process-step-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--gold-500);
+  background: var(--white);
+  box-shadow: 0 4px 20px rgba(212, 162, 84, 0.12);
+  position: relative;
+  z-index: 2;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.process-step:hover .process-step-number {
+  background: var(--gold-400);
+  color: var(--white);
+  box-shadow: 0 8px 30px rgba(212, 162, 84, 0.25);
+}
+
+.process-step-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 29px;
+  top: 60px;
+  bottom: -48px;
+  z-index: 1;
+}
+
+.process-step:last-child .process-step-connector {
+  display: none;
+}
+
+.connector-line {
+  width: 1px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--gold-300), var(--gold-100));
+}
+
+.connector-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold-400);
+  flex-shrink: 0;
+}
+
+.process-step-content {
+  flex: 1;
+  padding-top: var(--space-xs);
+}
+
+.process-step-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--earth-800);
+  margin-bottom: var(--space-sm);
+}
+
+.process-step-content p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--gray-500);
+}
+
+@media (max-width: 600px) {
+  .process-step {
+    gap: var(--space-lg);
+  }
+
+  .process-step-number {
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  .process-step-connector {
+    left: 23px;
+    top: 48px;
+  }
+
+  .process-step-content h3 {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,214 @@
+/* ============================================
+   Shared Section Styles
+   ============================================ */
+.section {
+  padding: var(--space-5xl) 0;
+  position: relative;
+}
+
+.section--cream {
+  background: var(--cream);
+}
+
+.section--dark {
+  background: linear-gradient(170deg, var(--earth-800) 0%, var(--earth-900) 100%);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section--dark h2,
+.section--dark h3,
+.section--dark h4 {
+  color: var(--white);
+}
+
+.section--accent {
+  background: linear-gradient(135deg, var(--earth-700) 0%, #2a1a0e 100%);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section--accent h3 {
+  color: var(--gold-300);
+}
+
+.section--rich {
+  background: linear-gradient(
+    160deg,
+    #1a0a08 0%,
+    #2a1210 40%,
+    #1a0a08 100%
+  );
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section--rich h2,
+.section--rich h3,
+.section--rich h4 {
+  color: var(--white);
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all var(--duration-slow) var(--ease-out);
+}
+
+.section-header.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-500);
+  margin-bottom: var(--space-md);
+}
+
+.section--dark .section-tag,
+.section--accent .section-tag,
+.section--rich .section-tag {
+  color: var(--gold-400);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-lg);
+}
+
+.section-divider-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-400), var(--crimson-400));
+  margin: 0 auto;
+  border-radius: 1px;
+}
+
+/* ============================================
+   Chi Siamo Section
+   ============================================ */
+.chi-siamo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.chi-siamo-text {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all var(--duration-slow) var(--ease-out);
+}
+
+.chi-siamo-text.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.text-lead {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--earth-700);
+  margin-bottom: var(--space-lg);
+}
+
+.text-lead strong {
+  color: var(--crimson-400);
+  font-weight: 700;
+}
+
+.chi-siamo-text p {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  line-height: 1.85;
+}
+
+/* Image Frame */
+.chi-siamo-image {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all var(--duration-slow) var(--ease-out) 0.15s;
+}
+
+.chi-siamo-image.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.image-frame img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.image-frame:hover img {
+  transform: scale(1.03);
+}
+
+.image-frame-accent {
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(212, 162, 84, 0.2);
+  border-radius: var(--radius-lg);
+  pointer-events: none;
+}
+
+.image-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(26, 21, 14, 0.3), transparent);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .chi-siamo-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .image-frame img {
+    height: 400px;
+  }
+
+  .chi-siamo-text,
+  .chi-siamo-image {
+    transform: translateY(25px);
+  }
+
+  .chi-siamo-text.is-visible,
+  .chi-siamo-image.is-visible {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .image-frame img {
+    height: 320px;
+  }
+}
