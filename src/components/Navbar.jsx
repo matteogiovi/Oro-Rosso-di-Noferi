@@ -26,7 +26,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`} id="main-nav">
+    <nav className={`nav ${scrolled ? 'nav--scrolled' : ''} ${menuOpen ? 'nav--menu-open' : ''}`} id="main-nav">
       <div className="nav-inner">
         <a href="#hero" className="nav-logo" onClick={handleLinkClick}>
           Oro Rosso di Noferi

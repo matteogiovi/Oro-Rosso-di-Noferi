@@ -135,21 +135,43 @@
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: var(--space-2xl);
     background: rgba(30, 22, 14, 0.97);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     opacity: 0;
     visibility: hidden;
     transition: all var(--duration-normal) var(--ease-out);
+    z-index: 999;
   }
 
   .nav-links--open {
     opacity: 1;
     visibility: visible;
+  }
+
+  /* When menu is open, override nav scrolled styles to avoid
+     backdrop-filter conflicts that break fixed positioning on iOS */
+  .nav--menu-open.nav--scrolled {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  /* Keep logo and toggle white when menu is open */
+  .nav--menu-open .nav-logo {
+    color: var(--white) !important;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .nav--menu-open .nav-toggle {
+    position: relative;
+    z-index: 1001;
   }
 
   .nav-links a {

@@ -48,7 +48,7 @@ export default function ChiSiamo() {
           >
             <div className="image-frame">
               <img
-                src="/images/fiore-zafferano.jpg"
+                src={`${import.meta.env.BASE_URL}images/fiore-zafferano.jpg`}
                 alt="Fiore di zafferano raccolto a mano nei campi di Noferi"
                 loading="lazy"
               />

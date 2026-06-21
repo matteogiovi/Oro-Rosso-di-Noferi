@@ -9,14 +9,14 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-logo">
             <img
-              src="/images/logo-oro-rosso.jpg"
+              src={`${import.meta.env.BASE_URL}images/logo-oro-rosso.jpg`}
               alt="Logo Oro Rosso di Noferi"
               className="footer-logo-img"
             />
           </div>
 
           <p className="footer-tagline">
-            Dalla passione per la terra nasce l'oro rosso della nostra tradizione.
+            Una passione coltivata nel cuore della Toscana.
           </p>
 
           <div className="footer-divider"></div>

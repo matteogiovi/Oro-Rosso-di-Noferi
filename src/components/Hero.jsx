@@ -64,7 +64,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-logo-container">
           <img
-            src="/images/logo-oro-rosso.jpg"
+            src={`${import.meta.env.BASE_URL}images/logo-oro-rosso.jpg`}
             alt="Logo Oro Rosso di Noferi"
             className="hero-logo"
             id="hero-logo"
@@ -72,7 +72,7 @@ export default function Hero() {
         </div>
 
         <p className="hero-subtitle">
-          Una passione coltivata nel cuore della Toscana
+          Dalla passione per la terra nasce l'oro rosso della nostra tradizione.
         </p>
 
         <div className="hero-divider">
