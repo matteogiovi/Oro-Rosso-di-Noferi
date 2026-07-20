@@ -155,6 +155,7 @@
   width: 100%;
   height: 500px;
   object-fit: cover;
+  object-position: center 40%;
   transition: transform var(--duration-slow) var(--ease-out);
 }
 
@@ -189,7 +190,10 @@
   }
 
   .image-frame img {
-    height: 400px;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 40%;
   }
 
   .chi-siamo-text,
@@ -209,6 +213,7 @@
   }
 
   .image-frame img {
-    height: 320px;
+    height: auto;
+    max-height: 450px;
   }
 }
