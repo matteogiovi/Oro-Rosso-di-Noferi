@@ -34,12 +34,23 @@ const contacts = [
   {
     icon: (
       <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="8" width="40" height="32" rx="4" />
-        <path d="M4 16l20 12 20-12" />
+        <rect x="6" y="6" width="36" height="36" rx="10" />
+        <circle cx="24" cy="24" r="9" />
+        <circle cx="35" cy="13" r="2" fill="currentColor" stroke="none" />
       </svg>
     ),
     title: 'Seguici',
-    content: <p className="contact-social">Presto su Instagram</p>,
+    content: (
+      <a
+        href="https://www.instagram.com/_ororossodinoferi_/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-link"
+        id="contact-instagram"
+      >
+        @_ororossodinoferi_
+      </a>
+    ),
   },
 ];
 
