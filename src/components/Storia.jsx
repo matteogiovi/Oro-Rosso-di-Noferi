@@ -1,7 +1,9 @@
+import { useLanguage } from '../i18n/LanguageContext';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Storia.css';
 
 export default function Storia() {
+  const { t } = useLanguage();
   const [ref, isVisible] = useScrollAnimation();
 
   return (
@@ -17,18 +19,12 @@ export default function Storia() {
             </div>
           </div>
           <div className="story-text">
-            <h3>La Nostra Avventura</h3>
+            <h3>{t('storia.title')}</h3>
             <p>
-              La nostra avventura è iniziata nel <strong>2024</strong>, quando abbiamo
-              deciso di dedicare parte del nostro tempo alla produzione di questa preziosa
-              spezia. Da allora continuiamo a coltivare e lavorare lo zafferano con
-              passione, puntando sempre sulla qualità e sul rispetto dei metodi
-              tradizionali.
+              {t('storia.p1Start')}<strong>{t('storia.p1Year')}</strong>{t('storia.p1End')}
             </p>
             <p>
-              L'amore per la terra e per i suoi frutti è un valore che si tramanda di
-              generazione in generazione e che oggi trova espressione nella coltivazione
-              dello zafferano.
+              {t('storia.p2')}
             </p>
           </div>
         </div>
