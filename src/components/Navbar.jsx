@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 import './Navbar.css';
 
 export default function Navbar() {
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -18,30 +21,30 @@ export default function Navbar() {
   };
 
   const links = [
-    { href: '#chi-siamo', label: 'Chi Siamo' },
-    { href: '#territorio', label: 'Il Territorio' },
-    { href: '#produzione', label: 'Produzione' },
-    { href: '#qualita', label: 'Qualità' },
-    { href: '#contatti', label: 'Contatti' },
+    { href: '#chi-siamo', label: t('navbar.chiSiamo') },
+    { href: '#territorio', label: t('navbar.territorio') },
+    { href: '#produzione', label: t('navbar.produzione') },
+    { href: '#qualita', label: t('navbar.qualita') },
+    { href: '#contatti', label: t('navbar.contatti') },
   ];
 
   return (
     <nav className={`nav ${scrolled ? 'nav--scrolled' : ''} ${menuOpen ? 'nav--menu-open' : ''}`} id="main-nav">
       <div className="nav-inner">
-        <a href="#hero" className="nav-logo" onClick={handleLinkClick}>
-          Oro Rosso di Noferi
-        </a>
-
         <button
           className={`nav-toggle ${menuOpen ? 'nav-toggle--active' : ''}`}
           id="nav-toggle"
-          aria-label={menuOpen ? 'Chiudi menu' : 'Apri menu'}
+          aria-label={menuOpen ? t('navbar.closeMenu') : t('navbar.openMenu')}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
+
+        <a href="#hero" className="nav-logo" onClick={handleLinkClick}>
+          Oro Rosso di Noferi
+        </a>
 
         <ul className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`} id="nav-links">
           {links.map((link) => (
@@ -52,6 +55,8 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        <LanguageSwitcher />
       </div>
     </nav>
   );

@@ -26,6 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-md);
 }
 
 .nav-logo {
@@ -35,6 +36,7 @@
   color: var(--white);
   letter-spacing: 0.03em;
   transition: color var(--duration-fast) var(--ease-out);
+  order: 1;
 }
 
 .nav--scrolled .nav-logo {
@@ -49,6 +51,7 @@
   display: flex;
   list-style: none;
   gap: var(--space-xl);
+  order: 2;
 }
 
 .nav-links a {
@@ -96,6 +99,7 @@
   flex-direction: column;
   gap: 5px;
   z-index: 1001;
+  order: 0;
 }
 
 .nav-toggle span {
@@ -127,6 +131,17 @@
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
+    order: 0;
+  }
+
+  .nav-logo {
+    order: 1;
+    flex: 1;
+    text-align: center;
+  }
+
+  .nav-links {
+    order: 3;
   }
 
   .nav-links {

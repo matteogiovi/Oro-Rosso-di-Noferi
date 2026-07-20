@@ -1,3 +1,4 @@
+import { LanguageProvider } from './i18n/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ChiSiamo from './components/ChiSiamo';
@@ -10,7 +11,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <>
+    <LanguageProvider>
       <Navbar />
       <Hero />
       <ChiSiamo />
@@ -20,6 +21,6 @@ export default function App() {
       <Qualita />
       <Contatti />
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }
