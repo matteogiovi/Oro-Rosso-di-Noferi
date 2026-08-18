@@ -114,7 +114,7 @@ export const translations = {
       tag: 'Parliamo',
       title: 'Contatti',
       doveSiamo: 'Dove Siamo',
-      chiamaci: 'Chiamaci',
+      contattaci: 'Contattaci',
       seguici: 'Seguici',
     },
 
@@ -240,7 +240,7 @@ export const translations = {
       tag: 'Get in Touch',
       title: 'Contact',
       doveSiamo: 'Where We Are',
-      chiamaci: 'Call Us',
+      contattaci: 'Contact Us',
       seguici: 'Follow Us',
     },
 
