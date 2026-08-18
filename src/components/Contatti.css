@@ -82,6 +82,16 @@
   background: var(--gold-500);
 }
 
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact-details .contact-link {
+  font-size: 1.1rem;
+}
+
 .contact-social {
   font-style: italic;
   color: var(--gray-400) !important;

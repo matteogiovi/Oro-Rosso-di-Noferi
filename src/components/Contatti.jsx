@@ -30,11 +30,16 @@ export default function Contatti() {
           <path d="M14 6h-4a4 4 0 00-4 4v4a28 28 0 0028 28h4a4 4 0 004-4v-4l-8-6-4 4a16 16 0 01-12-12l4-4z" />
         </svg>
       ),
-      title: t('contatti.chiamaci'),
+      title: t('contatti.contattaci'),
       content: (
-        <a href="tel:+393348716987" className="contact-link" id="contact-phone">
-          334 871 6987
-        </a>
+        <div className="contact-details">
+          <a href="tel:+393348716987" className="contact-link" id="contact-phone">
+            334 871 6987
+          </a>
+          <a href="mailto:info@ororossodinoferi.it" className="contact-link" id="contact-email">
+            info@ororossodinoferi.it
+          </a>
+        </div>
       ),
     },
     {
