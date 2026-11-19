@@ -25,6 +25,8 @@ export default function Footer() {
 
           <p className="footer-copy">
             &copy; 2024–{currentYear} Oro Rosso di Noferi — Noferi, Montevarchi (AR)
+            <br />
+            {t('footer.rights')}
           </p>
         </div>
       </div>
