@@ -31,6 +31,8 @@ export const translations = {
       p1: 'La nostra missione è valorizzare uno dei prodotti più preziosi della tradizione agricola italiana attraverso una coltivazione attenta, sostenibile e completamente orientata alla qualità.',
       p2: 'Oro Rosso di Noferi nasce dalla passione per l\'agricoltura e dal desiderio di mantenere vive le tradizioni che da generazioni accompagnano la nostra famiglia. Pur svolgendo questa attività nel tempo libero, ogni fase della coltivazione viene affrontata con impegno, dedizione e grande attenzione ai dettagli.',
       imgAlt: 'Fiore di zafferano raccolto a mano nei campi di Noferi',
+      prevPhoto: 'Foto precedente',
+      nextPhoto: 'Foto successiva',
     },
 
     // Storia
@@ -122,6 +124,7 @@ export const translations = {
     footer: {
       logoAlt: 'Logo Oro Rosso di Noferi',
       tagline: 'Una passione coltivata nel cuore della Toscana.',
+      rights: 'Tutti i diritti riservati.',
     },
   },
 
@@ -157,6 +160,8 @@ export const translations = {
       p1: 'Our mission is to enhance one of the most precious products of the Italian agricultural tradition through careful, sustainable cultivation entirely focused on quality.',
       p2: 'Oro Rosso di Noferi was born from a passion for agriculture and the desire to keep alive the traditions that have accompanied our family for generations. Although we carry out this activity in our spare time, every phase of cultivation is approached with commitment, dedication, and great attention to detail.',
       imgAlt: 'Saffron flower hand-picked in the fields of Noferi',
+      prevPhoto: 'Previous photo',
+      nextPhoto: 'Next photo',
     },
 
     // Storia
@@ -248,6 +253,7 @@ export const translations = {
     footer: {
       logoAlt: 'Oro Rosso di Noferi Logo',
       tagline: 'A passion cultivated in the heart of Tuscany.',
+      rights: 'All rights reserved.',
     },
   },
 };
